@@ -1,0 +1,71 @@
+# Sample Program AI
+
+A simple Node.js application demonstrating how to use Google's Gemini AI API to generate content with various configuration parameters.
+
+## Features
+
+- Integration with Google Gemini 2.5 Flash model
+- Configurable AI parameters (temperature, topP, topK, etc.)
+- Safety settings implementation
+- Environment variable configuration
+- Educational example for AI parameter explanation
+
+## Prerequisites
+
+- Node.js (version 14 or higher)
+- A Google AI API key for Gemini
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+   cd sample-program-ai
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your Gemini API key:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+## Usage
+
+Run the application:
+```bash
+node main.js
+```
+
+The program will generate a response explaining AI concepts in simple terms (like explaining to a 5-year-old) in Bahasa Indonesia.
+
+## Configuration Parameters
+
+The application demonstrates various AI generation parameters:
+
+- **temperature** (0.7): Controls randomness in responses
+- **topP** (0.9): Controls diversity via nucleus sampling
+- **topK** (40): Limits the number of highest probability tokens
+- **maxOutputTokens** (100): Maximum length of generated response
+- **frequencyPenalty** (0.5): Reduces repetition of frequent tokens
+- **presencePenalty** (0.5): Reduces repetition of any tokens
+- **stopSequences**: Sequences that stop generation
+- **safetySettings**: Content filtering configuration
+
+## Dependencies
+
+- `@google/genai`: Google Generative AI SDK
+- `dotenv`: Environment variable loader
+
+## Getting Your API Key
+
+1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Create a new API key
+3. Add it to your `.env` file
+
+## License
+
+This project is for educational purposes.
